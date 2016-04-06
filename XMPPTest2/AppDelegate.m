@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "YYLoginViewController.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    YYLoginViewController *vc = [[YYLoginViewController alloc]initWithNibName:@"YYLoginViewController" bundle:nil];
+    
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window.rootViewController = nc;
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
