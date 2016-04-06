@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A52240F6D5B170A98344FE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DE80561BD598A675FD3043 /* libPods.a */; };
+		7DC7ED9E1CB51F3B00228340 /* YYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */; settings = {ASSET_TAGS = (); }; };
 		7DF24E051CB3CCA200688B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E041CB3CCA200688B0B /* main.m */; };
 		7DF24E081CB3CCA200688B0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E071CB3CCA200688B0B /* AppDelegate.m */; };
 		7DF24E0E1CB3CCA200688B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E0C1CB3CCA200688B0B /* Main.storyboard */; };
@@ -24,6 +25,8 @@
 		20027CC58A7FEEBF3274C46C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		31CE0491BCEAFBC491CAD1B4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		35DE80561BD598A675FD3043 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DC7ED9C1CB51F3B00228340 /* YYUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYUserModel.h; sourceTree = "<group>"; };
+		7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYUserModel.m; sourceTree = "<group>"; };
 		7DF24E001CB3CCA200688B0B /* XMPPTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF24E041CB3CCA200688B0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DF24E061CB3CCA200688B0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 				7DF24E221CB3D14300688B0B /* Utility */,
 				7DF24E061CB3CCA200688B0B /* AppDelegate.h */,
 				7DF24E071CB3CCA200688B0B /* AppDelegate.m */,
+				7DC7ED9C1CB51F3B00228340 /* YYUserModel.h */,
+				7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */,
 				7DF24E281CB5023F00688B0B /* FriendListController */,
 				7DF24E261CB5020C00688B0B /* LoginController */,
 				7DF24E0C1CB3CCA200688B0B /* Main.storyboard */,
@@ -255,6 +260,7 @@
 				7DF24E251CB3D16C00688B0B /* YYXMPPHelper.m in Sources */,
 				7DF24E111CB3CCA200688B0B /* XMPPTest2.xcdatamodeld in Sources */,
 				7DF24E081CB3CCA200688B0B /* AppDelegate.m in Sources */,
+				7DC7ED9E1CB51F3B00228340 /* YYUserModel.m in Sources */,
 				7DF24E051CB3CCA200688B0B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

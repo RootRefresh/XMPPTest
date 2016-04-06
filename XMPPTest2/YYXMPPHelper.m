@@ -18,7 +18,7 @@
 #import <XMPPCapabilitiesCoreDataStorage.h>
 
 
-
+#import "YYUserModel.h"
 
 @interface YYXMPPHelper()
 {
@@ -382,7 +382,7 @@
 {
     self.friendListBlock = completion;
     
-    // 通过coredata 获取好友列表
+    // 通过coredata 获取好友列表 很牛Bility的 便捷方式
     NSManagedObjectContext *context = [self rosterContext];
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"XMPPUserCoreDataStorageObject" inManagedObjectContext:context];
@@ -405,7 +405,19 @@
         });
         
     });
-    
+    // 下面的方法是从服务器中查询获取好友列表
+      // 创建iq节点
+//      NSXMLElement *iq = [NSXMLElement elementWithName:@"iq"];
+//      [iq addAttributeWithName:@"type" stringValue:@"get"];
+//      [iq addAttributeWithName:@"from" stringValue:[NSString stringWithFormat:@"%@@%@", _jid, kServer]];
+//      [iq addAttributeWithName:@"to" stringValue:kServer];
+//      [iq addAttributeWithName:@"id" stringValue:@"123"];
+//      // 添加查询类型
+//      NSXMLElement *query = [NSXMLElement elementWithName:@"query" xmlns:@"jabber:iq:roster"];
+//      [iq addChild:query];
+//    
+//      // 发送查询
+//      [_xmppStream sendElement:iq];
 }
 
 
@@ -502,28 +514,29 @@
             return YES;
         }
         // 这种方式是通过手动发送IQ来查询好友列表的，不过这样操作不如使用XMPP自带的coredata操作方便
-        //    NSString *thdID = [NSString stringWithFormat:@"%@", [iq attributeStringValueForName:@"id"] ];
-        //    if ([thdID isEqualToString:kFetchBuddyListQueryID]) {
-        //      NSXMLElement *query = [iq elementForName:@"query"];
-        //
-        //      NSMutableArray *result = [[NSMutableArray alloc] init];
-        //      for (NSXMLElement *item in query.children) {
-        //        NSString *jid = [item attributeStringValueForName:@"jid"];
-        //        NSString *name = [item attributeStringValueForName:@"name"];
-        //
-        //        HYBBuddyModel *model = [[HYBBuddyModel alloc] init];
-        //        model.jid = jid;
-        //        model.name = name;
-        //
-        //        [result addObject:model];
-        //      }
-        //
-        //      if (self.buddyListBlock) {
-        //        self.buddyListBlock(result, nil);
-        //      }
-        //      
-        //      return YES;
-        //    }
+            NSString *thdID = [NSString stringWithFormat:@"%@", [iq attributeStringValueForName:@"id"] ];
+            if ([thdID isEqualToString:@"123"]) {
+              NSXMLElement *query = [iq elementForName:@"query"];
+        
+              NSMutableArray *result = [[NSMutableArray alloc] init];
+              for (NSXMLElement *item in query.children) {
+                NSString *jid = [item attributeStringValueForName:@"jid"];
+                NSString *name = [item attributeStringValueForName:@"name"];
+        
+                YYUserModel *model = [[YYUserModel alloc] init];
+                model.jid = jid;
+                model.name = name;
+        
+                [result addObject:model];
+              }
+                NSLog(@"%@",result);
+                
+              if (self.friendListBlock) {
+                self.friendListBlock(result, nil);
+              }
+              
+              return YES;
+            }
     }else if ([iq.type isEqualToString:@"set"]){
         
         NSXMLElement *query = [iq elementForName:@"query"];
@@ -632,6 +645,7 @@
  unsubscribed: 表示拒绝添加对方为好友（拒绝添加对方为好友）
  error: 表示presence信息报中包含了一个错误消息。（出错）
  */
+#pragma mark ### 花名册相关 ###
 - (void)xmppRoster:(XMPPRoster *)sender didReceivePresenceSubscriptionRequest:(XMPPPresence *)presence {
     NSLog(@"接收到好友申请消息：%@", [presence fromStr]);
     // 好友在线状态
@@ -693,10 +707,10 @@
     NSString *subscription = [item attributeStringValueForName:@"subscription"];
     if ([subscription isEqualToString:@"both"]) {
         NSLog(@"双方已经互为好友");
-//        if (self.buddyListBlock) {
-//            // 更新好友列表
-//            [self fetchBuddyListWithCompletion:self.buddyListBlock];
-//        }
+        if (self.friendListBlock) {
+            // 更新好友列表
+            [self fetchFriendListWithCompletion:self.friendListBlock];
+        }
     }
 }
 

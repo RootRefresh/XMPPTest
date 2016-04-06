@@ -25,8 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
-
+    [self createTableView];
+    
+    [self setNavigationBar];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.friendArray = [NSMutableArray array];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,21 +51,20 @@
        
         if (friendList && friendList.count) {
             
+           dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                
                 [self.friendArray removeAllObjects];
                 
                 [self.friendArray addObjectsFromArray:friendList];
 
-                dispatch_async(dispatch_get_main_queue(), ^{
+               dispatch_async(dispatch_get_main_queue(), ^{
                     
                     [self.tableView reloadData];
                     
                     count = 0;
                     
                 });
-                
+               
             });
             
         }else{
@@ -114,6 +116,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"friendArray :%ld",self.friendArray.count);
+    
     return self.friendArray.count;
 }
 
@@ -122,7 +126,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ID"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ID"];
     }
     
     /*
