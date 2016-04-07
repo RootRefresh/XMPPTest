@@ -22,9 +22,12 @@ typedef void (^YYCompletionBlock)(BOOL isSuccessful,NSString *errorMsg);
 
 typedef void(^YYFetchResultBlock)(NSArray *friendList,NSString *errorMsg);
 
+typedef void(^YYGetNewMessageBlock)(NSString *);
+
 @interface YYXMPPHelper : NSObject <XMPPStreamDelegate,XMPPRosterDelegate>
 
 
+@property (nonatomic, copy) YYGetNewMessageBlock newMessageBlock;
 
 + (YYXMPPHelper *)shareInstance;
 
@@ -58,6 +61,11 @@ typedef void(^YYFetchResultBlock)(NSArray *friendList,NSString *errorMsg);
 //获取好友列表
 - (void)fetchFriendListWithCompletion:(YYFetchResultBlock)completion;
 
+//发送消息
+- (void)sendText:(NSString *)text toJid:(NSString *)jidString completion:(YYCompletionBlock)completion;
+
+//得到消息 给聊天页传block
+- (void)receiveNewMessageWithBlock:(YYGetNewMessageBlock)block;
 
 
 @end

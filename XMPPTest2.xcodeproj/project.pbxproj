@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		7A52240F6D5B170A98344FE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DE80561BD598A675FD3043 /* libPods.a */; };
 		7DC7ED9E1CB51F3B00228340 /* YYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */; settings = {ASSET_TAGS = (); }; };
+		7DEB9E911CB66884008E2D19 /* YYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E901CB66884008E2D19 /* YYChatViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7DEB9E941CB6694C008E2D19 /* YYChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E931CB6694C008E2D19 /* YYChatCell.m */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA21CB670DF008E2D19 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E971CB670DF008E2D19 /* 1.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA31CB670DF008E2D19 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E981CB670DF008E2D19 /* 2.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA41CB670DF008E2D19 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E991CB670DF008E2D19 /* 3.jpeg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA51CB670DF008E2D19 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9A1CB670DF008E2D19 /* 4.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA61CB670DF008E2D19 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9B1CB670DF008E2D19 /* 5.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA71CB670DF008E2D19 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9C1CB670DF008E2D19 /* 6.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA81CB670DF008E2D19 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9D1CB670DF008E2D19 /* 7.jpg */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EA91CB670DF008E2D19 /* fcl_chat_me.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9E1CB670DF008E2D19 /* fcl_chat_me.png */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EAA1CB670DF008E2D19 /* fcl_chat_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9F1CB670DF008E2D19 /* fcl_chat_me@2x.png */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EAB1CB670DF008E2D19 /* fcl_chat_others.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA01CB670DF008E2D19 /* fcl_chat_others.png */; settings = {ASSET_TAGS = (); }; };
+		7DEB9EAC1CB670DF008E2D19 /* fcl_chat_others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA11CB670DF008E2D19 /* fcl_chat_others@2x.png */; settings = {ASSET_TAGS = (); }; };
 		7DF24E051CB3CCA200688B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E041CB3CCA200688B0B /* main.m */; };
 		7DF24E081CB3CCA200688B0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E071CB3CCA200688B0B /* AppDelegate.m */; };
 		7DF24E0E1CB3CCA200688B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E0C1CB3CCA200688B0B /* Main.storyboard */; };
@@ -27,6 +40,21 @@
 		35DE80561BD598A675FD3043 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC7ED9C1CB51F3B00228340 /* YYUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYUserModel.h; sourceTree = "<group>"; };
 		7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYUserModel.m; sourceTree = "<group>"; };
+		7DEB9E8F1CB66884008E2D19 /* YYChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYChatViewController.h; sourceTree = "<group>"; };
+		7DEB9E901CB66884008E2D19 /* YYChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYChatViewController.m; sourceTree = "<group>"; };
+		7DEB9E921CB6694C008E2D19 /* YYChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYChatCell.h; sourceTree = "<group>"; };
+		7DEB9E931CB6694C008E2D19 /* YYChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYChatCell.m; sourceTree = "<group>"; };
+		7DEB9E971CB670DF008E2D19 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = "气泡聊天图片/头像/1.jpg"; sourceTree = "<group>"; };
+		7DEB9E981CB670DF008E2D19 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = "气泡聊天图片/头像/2.jpg"; sourceTree = "<group>"; };
+		7DEB9E991CB670DF008E2D19 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = "气泡聊天图片/头像/3.jpeg"; sourceTree = "<group>"; };
+		7DEB9E9A1CB670DF008E2D19 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 4.jpg; path = "气泡聊天图片/头像/4.jpg"; sourceTree = "<group>"; };
+		7DEB9E9B1CB670DF008E2D19 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 5.jpg; path = "气泡聊天图片/头像/5.jpg"; sourceTree = "<group>"; };
+		7DEB9E9C1CB670DF008E2D19 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = "气泡聊天图片/头像/6.jpg"; sourceTree = "<group>"; };
+		7DEB9E9D1CB670DF008E2D19 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 7.jpg; path = "气泡聊天图片/头像/7.jpg"; sourceTree = "<group>"; };
+		7DEB9E9E1CB670DF008E2D19 /* fcl_chat_me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fcl_chat_me.png; path = "气泡聊天图片/fcl_chat_me.png"; sourceTree = "<group>"; };
+		7DEB9E9F1CB670DF008E2D19 /* fcl_chat_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fcl_chat_me@2x.png"; path = "气泡聊天图片/fcl_chat_me@2x.png"; sourceTree = "<group>"; };
+		7DEB9EA01CB670DF008E2D19 /* fcl_chat_others.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fcl_chat_others.png; path = "气泡聊天图片/fcl_chat_others.png"; sourceTree = "<group>"; };
+		7DEB9EA11CB670DF008E2D19 /* fcl_chat_others@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fcl_chat_others@2x.png"; path = "气泡聊天图片/fcl_chat_others@2x.png"; sourceTree = "<group>"; };
 		7DF24E001CB3CCA200688B0B /* XMPPTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMPPTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF24E041CB3CCA200688B0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DF24E061CB3CCA200688B0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +93,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7DEB9E8E1CB66860008E2D19 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7DEB9E8F1CB66884008E2D19 /* YYChatViewController.h */,
+				7DEB9E901CB66884008E2D19 /* YYChatViewController.m */,
+				7DEB9E921CB6694C008E2D19 /* YYChatCell.h */,
+				7DEB9E931CB6694C008E2D19 /* YYChatCell.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		7DEB9EAD1CB671B4008E2D19 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				7DEB9E971CB670DF008E2D19 /* 1.jpg */,
+				7DEB9E981CB670DF008E2D19 /* 2.jpg */,
+				7DEB9E991CB670DF008E2D19 /* 3.jpeg */,
+				7DEB9E9A1CB670DF008E2D19 /* 4.jpg */,
+				7DEB9E9B1CB670DF008E2D19 /* 5.jpg */,
+				7DEB9E9C1CB670DF008E2D19 /* 6.jpg */,
+				7DEB9E9D1CB670DF008E2D19 /* 7.jpg */,
+				7DEB9E9E1CB670DF008E2D19 /* fcl_chat_me.png */,
+				7DEB9E9F1CB670DF008E2D19 /* fcl_chat_me@2x.png */,
+				7DEB9EA01CB670DF008E2D19 /* fcl_chat_others.png */,
+				7DEB9EA11CB670DF008E2D19 /* fcl_chat_others@2x.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		7DF24DF71CB3CCA200688B0B = {
 			isa = PBXGroup;
 			children = (
@@ -86,11 +143,13 @@
 		7DF24E021CB3CCA200688B0B /* XMPPTest2 */ = {
 			isa = PBXGroup;
 			children = (
+				7DEB9EAD1CB671B4008E2D19 /* Image */,
 				7DF24E221CB3D14300688B0B /* Utility */,
 				7DF24E061CB3CCA200688B0B /* AppDelegate.h */,
 				7DF24E071CB3CCA200688B0B /* AppDelegate.m */,
 				7DC7ED9C1CB51F3B00228340 /* YYUserModel.h */,
 				7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */,
+				7DEB9E8E1CB66860008E2D19 /* Chat */,
 				7DF24E281CB5023F00688B0B /* FriendListController */,
 				7DF24E261CB5020C00688B0B /* LoginController */,
 				7DF24E0C1CB3CCA200688B0B /* Main.storyboard */,
@@ -208,8 +267,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEB9EA91CB670DF008E2D19 /* fcl_chat_me.png in Resources */,
+				7DEB9EA71CB670DF008E2D19 /* 6.jpg in Resources */,
+				7DEB9EA61CB670DF008E2D19 /* 5.jpg in Resources */,
+				7DEB9EA81CB670DF008E2D19 /* 7.jpg in Resources */,
 				7DF24E211CB3CD7800688B0B /* YYLoginViewController.xib in Resources */,
+				7DEB9EA31CB670DF008E2D19 /* 2.jpg in Resources */,
 				7DF24E161CB3CCA200688B0B /* LaunchScreen.storyboard in Resources */,
+				7DEB9EA21CB670DF008E2D19 /* 1.jpg in Resources */,
+				7DEB9EA41CB670DF008E2D19 /* 3.jpeg in Resources */,
+				7DEB9EAB1CB670DF008E2D19 /* fcl_chat_others.png in Resources */,
+				7DEB9EAC1CB670DF008E2D19 /* fcl_chat_others@2x.png in Resources */,
+				7DEB9EAA1CB670DF008E2D19 /* fcl_chat_me@2x.png in Resources */,
+				7DEB9EA51CB670DF008E2D19 /* 4.jpg in Resources */,
 				7DF24E131CB3CCA200688B0B /* Assets.xcassets in Resources */,
 				7DF24E0E1CB3CCA200688B0B /* Main.storyboard in Resources */,
 			);
@@ -257,6 +327,8 @@
 			files = (
 				7DF24E2B1CB5025E00688B0B /* FriendListViewController.m in Sources */,
 				7DF24E201CB3CD7800688B0B /* YYLoginViewController.m in Sources */,
+				7DEB9E911CB66884008E2D19 /* YYChatViewController.m in Sources */,
+				7DEB9E941CB6694C008E2D19 /* YYChatCell.m in Sources */,
 				7DF24E251CB3D16C00688B0B /* YYXMPPHelper.m in Sources */,
 				7DF24E111CB3CCA200688B0B /* XMPPTest2.xcdatamodeld in Sources */,
 				7DF24E081CB3CCA200688B0B /* AppDelegate.m in Sources */,

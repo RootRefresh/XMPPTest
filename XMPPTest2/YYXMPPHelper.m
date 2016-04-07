@@ -88,7 +88,7 @@
 #if !TARGET_IPHONE_SIMULATOR
     // 设置此行为YES,表示允许socket在后台运行
     // 在模拟器上是不支持在后台运行的
-    _xmppStream.enableBackgroundingOnSocket = YES;
+  //  _xmppStream.enableBackgroundingOnSocket = YES;
 
 #endif
     
@@ -580,7 +580,24 @@
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
 {
     NSLog(@"xmpp stream 接收到好友消息：%@", [message XMLString]);
+    
+    NSString *messageBody = [[message elementForName:@"body"] stringValue];
+    
+    //self.newMessageBlock = ^(NSString *string){};
+    
+    if (nil != messageBody) {
+        
+        if (self.newMessageBlock) {
+            self.newMessageBlock(messageBody);
+        }
+        
+    }
 
+}
+
+- (void)receiveNewMessageWithBlock:(YYGetNewMessageBlock)block
+{
+    self.newMessageBlock = block;
 }
 
 #pragma mark 注册代理
@@ -635,6 +652,52 @@
 }
 
 
+#pragma mark ### 添加好友 ###
+
+- (void)addFriendWithJid:(NSString *)jidString completion:(YYCompletionBlock)completion
+{
+    if (![jidString hasSuffix:kServer]) {
+        
+        jidString = [NSString stringWithFormat:@"%@@%@",jidString,kServer];
+        
+    }
+    
+    //先判断是否已经是好友
+    
+    if ([_xmppRosterStorage userForJID:[XMPPJID jidWithString:jidString] xmppStream:_xmppStream managedObjectContext:[self rosterContext]]) {
+        
+        if (completion) {
+            completion(NO,[NSString stringWithFormat:@"%@已经是好友",jidString]);
+        }
+        
+        return;
+    }
+    
+    self.completionBlock = completion;
+    
+    [_xmppRoster subscribePresenceToUser:[XMPPJID jidWithString:jidString]];
+    if (completion) {
+        completion(YES, nil);
+    }
+}
+
+- (void)removeFriendWithJid:(NSString *)jidString completion:(YYCompletionBlock)completion
+{
+    if (![jidString hasSuffix:kServer]) {
+        
+        jidString = [NSString stringWithFormat:@"%@@%@",jidString,kServer];
+        
+    }
+    
+    self.completionBlock = completion;
+    
+    [_xmppRoster removeUser:[XMPPJID jidWithString:jidString]];
+    
+    if(completion){
+        completion(YES,nil);
+    }
+}
+
 /*
  presence.type有以下几种状态：
  
@@ -672,7 +735,7 @@
 
 // 添加好友同意后，会进入到此代理
 - (void)xmppRoster:(XMPPRoster *)sender didReceiveRosterPush:(XMPPIQ *)iq {
-    NSLog(@"添加成功!!!didReceiveRosterPush -> :%@",iq.description);
+    NSLog(@"花名册操作成功!!!didReceiveRosterPush -> :%@",iq.description);
     
     DDXMLElement *query = [iq elementsForName:@"query"][0];
     DDXMLElement *item = [query elementsForName:@"item"][0];
@@ -686,10 +749,15 @@
     else if ([subscription isEqualToString:@"to"]) {// 我关注对方
         NSLog(@"我成功添加对方为好友，即对方已经同意我添加好友的请求");
     } else if ([subscription isEqualToString:@"remove"]) {
-        // 删除好友
-//        if (self.completionBlock) {
-//            self.completionBlock(YES, nil);
-//        }
+         //删除好友
+        if (self.completionBlock) {
+            self.completionBlock(YES, nil);
+        }
+    }
+    
+    if (self.friendListBlock) {
+        // 更新好友列表
+        [self fetchFriendListWithCompletion:self.friendListBlock];
     }
 }
 
@@ -712,6 +780,30 @@
             [self fetchFriendListWithCompletion:self.friendListBlock];
         }
     }
+}
+
+- (void)sendText:(NSString *)text toJid:(NSString *)jidString completion:(YYCompletionBlock)completion
+{
+    NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+    [body setStringValue:text];
+    
+    NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
+    [message addAttributeWithName:@"type" stringValue:@"chat"];
+    
+    if (![jidString hasSuffix:kServer]) {
+        jidString = [NSString stringWithFormat:@"%@@%@", jidString, kServer];
+    }
+    
+    [message addAttributeWithName:@"to" stringValue:jidString];
+    
+    [message addChild:body];
+    
+    [_xmppStream sendElement:message];
+    
+    if (completion) {
+        completion(YES,nil);
+    }
+    
 }
 
 @end
