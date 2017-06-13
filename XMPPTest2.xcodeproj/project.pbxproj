@@ -8,30 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		7A52240F6D5B170A98344FE4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DE80561BD598A675FD3043 /* libPods.a */; };
-		7DC7ED9E1CB51F3B00228340 /* YYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */; settings = {ASSET_TAGS = (); }; };
-		7DEB9E911CB66884008E2D19 /* YYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E901CB66884008E2D19 /* YYChatViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7DEB9E941CB6694C008E2D19 /* YYChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E931CB6694C008E2D19 /* YYChatCell.m */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA21CB670DF008E2D19 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E971CB670DF008E2D19 /* 1.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA31CB670DF008E2D19 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E981CB670DF008E2D19 /* 2.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA41CB670DF008E2D19 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E991CB670DF008E2D19 /* 3.jpeg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA51CB670DF008E2D19 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9A1CB670DF008E2D19 /* 4.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA61CB670DF008E2D19 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9B1CB670DF008E2D19 /* 5.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA71CB670DF008E2D19 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9C1CB670DF008E2D19 /* 6.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA81CB670DF008E2D19 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9D1CB670DF008E2D19 /* 7.jpg */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EA91CB670DF008E2D19 /* fcl_chat_me.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9E1CB670DF008E2D19 /* fcl_chat_me.png */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EAA1CB670DF008E2D19 /* fcl_chat_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9F1CB670DF008E2D19 /* fcl_chat_me@2x.png */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EAB1CB670DF008E2D19 /* fcl_chat_others.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA01CB670DF008E2D19 /* fcl_chat_others.png */; settings = {ASSET_TAGS = (); }; };
-		7DEB9EAC1CB670DF008E2D19 /* fcl_chat_others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA11CB670DF008E2D19 /* fcl_chat_others@2x.png */; settings = {ASSET_TAGS = (); }; };
+		7DC7ED9E1CB51F3B00228340 /* YYUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC7ED9D1CB51F3B00228340 /* YYUserModel.m */; };
+		7DEB9E911CB66884008E2D19 /* YYChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E901CB66884008E2D19 /* YYChatViewController.m */; };
+		7DEB9E941CB6694C008E2D19 /* YYChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB9E931CB6694C008E2D19 /* YYChatCell.m */; };
+		7DEB9EA21CB670DF008E2D19 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E971CB670DF008E2D19 /* 1.jpg */; };
+		7DEB9EA31CB670DF008E2D19 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E981CB670DF008E2D19 /* 2.jpg */; };
+		7DEB9EA41CB670DF008E2D19 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E991CB670DF008E2D19 /* 3.jpeg */; };
+		7DEB9EA51CB670DF008E2D19 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9A1CB670DF008E2D19 /* 4.jpg */; };
+		7DEB9EA61CB670DF008E2D19 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9B1CB670DF008E2D19 /* 5.jpg */; };
+		7DEB9EA71CB670DF008E2D19 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9C1CB670DF008E2D19 /* 6.jpg */; };
+		7DEB9EA81CB670DF008E2D19 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9D1CB670DF008E2D19 /* 7.jpg */; };
+		7DEB9EA91CB670DF008E2D19 /* fcl_chat_me.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9E1CB670DF008E2D19 /* fcl_chat_me.png */; };
+		7DEB9EAA1CB670DF008E2D19 /* fcl_chat_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9E9F1CB670DF008E2D19 /* fcl_chat_me@2x.png */; };
+		7DEB9EAB1CB670DF008E2D19 /* fcl_chat_others.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA01CB670DF008E2D19 /* fcl_chat_others.png */; };
+		7DEB9EAC1CB670DF008E2D19 /* fcl_chat_others@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB9EA11CB670DF008E2D19 /* fcl_chat_others@2x.png */; };
 		7DF24E051CB3CCA200688B0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E041CB3CCA200688B0B /* main.m */; };
 		7DF24E081CB3CCA200688B0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E071CB3CCA200688B0B /* AppDelegate.m */; };
 		7DF24E0E1CB3CCA200688B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E0C1CB3CCA200688B0B /* Main.storyboard */; };
 		7DF24E111CB3CCA200688B0B /* XMPPTest2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E0F1CB3CCA200688B0B /* XMPPTest2.xcdatamodeld */; };
 		7DF24E131CB3CCA200688B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E121CB3CCA200688B0B /* Assets.xcassets */; };
 		7DF24E161CB3CCA200688B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E141CB3CCA200688B0B /* LaunchScreen.storyboard */; };
-		7DF24E201CB3CD7800688B0B /* YYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E1E1CB3CD7800688B0B /* YYLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		7DF24E211CB3CD7800688B0B /* YYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E1F1CB3CD7800688B0B /* YYLoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		7DF24E251CB3D16C00688B0B /* YYXMPPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E241CB3D16C00688B0B /* YYXMPPHelper.m */; settings = {ASSET_TAGS = (); }; };
-		7DF24E2B1CB5025E00688B0B /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E2A1CB5025E00688B0B /* FriendListViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7DF24E201CB3CD7800688B0B /* YYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E1E1CB3CD7800688B0B /* YYLoginViewController.m */; };
+		7DF24E211CB3CD7800688B0B /* YYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DF24E1F1CB3CD7800688B0B /* YYLoginViewController.xib */; };
+		7DF24E251CB3D16C00688B0B /* YYXMPPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E241CB3D16C00688B0B /* YYXMPPHelper.m */; };
+		7DF24E2B1CB5025E00688B0B /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF24E2A1CB5025E00688B0B /* FriendListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,7 +235,7 @@
 		7DF24DF81CB3CCA200688B0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Refresh_Yy;
 				TargetAttributes = {
 					7DF24DFF1CB3CCA200688B0B = {
@@ -372,8 +372,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -415,8 +417,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

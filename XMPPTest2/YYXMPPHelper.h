@@ -24,10 +24,16 @@ typedef void(^YYFetchResultBlock)(NSArray *friendList,NSString *errorMsg);
 
 typedef void(^YYGetNewMessageBlock)(NSString *);
 
+typedef void(^YYGetNewPresenceBlock)(NSString *userName,NSString *state);
+
+
+
 @interface YYXMPPHelper : NSObject <XMPPStreamDelegate,XMPPRosterDelegate>
 
 
 @property (nonatomic, copy) YYGetNewMessageBlock newMessageBlock;
+
+@property (nonatomic, copy) YYGetNewPresenceBlock newPresenceBlock;
 
 + (YYXMPPHelper *)shareInstance;
 

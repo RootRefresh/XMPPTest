@@ -18,6 +18,10 @@
 #import <XMPPCapabilitiesCoreDataStorage.h>
 
 
+
+
+
+
 #import "YYUserModel.h"
 
 @interface YYXMPPHelper()
@@ -637,6 +641,24 @@
     
     // 好友上线下线处理，具体应该要在此做一些处理，如更新好友在线状态
     // TO DO
+    
+    NSString *stateString;
+    
+    if ([type isEqualToString:@"available"]) {
+        
+        stateString = @"在线";
+        
+    }else if ([type isEqualToString:@"unavailable"]){
+        
+        stateString = @"离线";
+
+    }
+    
+    if (self.newPresenceBlock) {
+        
+        self.newPresenceBlock(fromUser,stateString);
+        
+    }
 }
 
 - (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message {
